@@ -34,13 +34,24 @@ All dependencies are listed in the `requirements.txt` file.
    pip install -r requirements.txt
    ```
 
+3. Create a virtual environment (recommended):
+   ```
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   pip install -r requirements.txt
+   ```
+
 ## Running the Application
 
-To run the Streamlit application:
+1. First, train the model:
+   ```
+   python main.py
+   ```
 
-```
-streamlit run app.py
-```
+2. Then run the Streamlit application:
+   ```
+   streamlit run streamlit_app.py
+   ```
 
 This will start a local server and open the application in your web browser.
 
@@ -73,6 +84,8 @@ The model is a simple feed-forward neural network with:
 - Hidden layer 2: 64 neurons with ReLU activation
 - Output layer: 10 neurons (one for each class)
 
-## Original File
+## Implementation Details
 
-The original implementation can be found in `main.py`.
+The implementation consists of two main files:
+- `main.py`: Contains the model definition, training code, and saves the trained model
+- `streamlit_app.py`: Provides a web interface to use the trained model for image classification

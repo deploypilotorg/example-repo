@@ -1,0 +1,40 @@
+# Virtual Environment
+venv/
+env/
+ENV/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# PyCharm and other IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Model files
+model.joblib
+*.pt
+*.pth
+
+# Dataset
+data/
+
+# Logs
+*.log
+
+# OS specific
+.DS_Store
+Thumbs.db 

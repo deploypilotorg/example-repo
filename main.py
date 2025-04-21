@@ -5,6 +5,7 @@ import torch.nn as nn
 import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
+import joblib
 
 # Define a simple Neural Network
 class FashionNN(nn.Module):
@@ -64,6 +65,10 @@ def train():
             correct += (preds == labels).sum().item()
 
     print(f"Accuracy on test set: {100 * correct / total:.2f}%")
+    
+    # Save the trained model
+    joblib.dump(model, 'model.joblib')
+    print("Model saved as model.joblib")
 
 if __name__ == "__main__":
     train()
